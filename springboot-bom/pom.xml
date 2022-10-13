@@ -15,7 +15,7 @@
     </properties>
 
     <modules>
-        <module>../mybatis-plus</module>
+        <module>mybatis-plus</module>
     </modules>
 
     <dependencies>

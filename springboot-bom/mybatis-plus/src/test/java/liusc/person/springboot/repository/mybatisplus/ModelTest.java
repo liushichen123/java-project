@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
  * @author LiuShiChen
  * @date 2022/10/19 10:34:37
  **/
-public class ModelTest extends MybatisPlusApplicationTests {
+public class ModelTest extends SpringbootApplicationTests {
 
     @Test
     public void testAdd() {

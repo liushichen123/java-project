@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Assert;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import liusc.person.springboot.repository.mybatisplus.domain.enums.GradeEnum;
 import liusc.person.springboot.repository.mybatisplus.repository.entity.UserDO;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,7 +21,7 @@ import java.util.Map;
  * @date 2022/10/19 10:00:19
  **/
 @SpringBootTest
-public class CrudTest extends MybatisPlusApplicationTests {
+public class CrudTest extends SpringbootApplicationTests {
 
     @Test
     public void contextLoads() {
@@ -38,7 +39,7 @@ public class CrudTest extends MybatisPlusApplicationTests {
     @Test
     public void testSave() {
         System.out.println(("----- save method test ------"));
-        boolean result = userService.save(new UserDO().setName("liusc").setAge(24));
+        boolean result = userService.save(new UserDO().setName("liusc").setAge(24).setGrade(GradeEnum.HIGH));
         Assert.isTrue(result, "用户新增失败");
     }
 
@@ -74,7 +75,7 @@ public class CrudTest extends MybatisPlusApplicationTests {
     @Test
     public void testRemoveById() {
         System.out.println(("----- RemoveById method test ------"));
-        boolean result = userService.removeById(1582548027491504129L);
+        boolean result = userService.removeById(6L);
         Assert.isTrue(result, "用户删除失败");
     }
 

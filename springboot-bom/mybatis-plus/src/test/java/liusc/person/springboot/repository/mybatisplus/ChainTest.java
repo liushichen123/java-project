@@ -16,7 +16,7 @@ import java.util.List;
  * @author LiuShiChen
  * @date 2022/10/19 10:01:21
  **/
-public class ChainTest extends MybatisPlusApplicationTests {
+public class ChainTest extends SpringbootApplicationTests {
 
     @Resource
     public UserMapper userMapper;

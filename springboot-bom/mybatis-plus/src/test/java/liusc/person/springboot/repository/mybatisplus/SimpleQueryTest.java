@@ -4,14 +4,11 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.toolkit.SimpleQuery;
-import liusc.person.springboot.repository.mybatisplus.domain.User;
 import liusc.person.springboot.repository.mybatisplus.repository.entity.UserDO;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 /**
  * SimpleQuery 工具类 测试
@@ -19,7 +16,7 @@ import java.util.stream.Collectors;
  * @author LiuShiChen
  * @date 2022/10/19 10:41:53
  **/
-public class SimpleQueryTest extends MybatisPlusApplicationTests {
+public class SimpleQueryTest extends SpringbootApplicationTests {
 
     @Test
     public void testSelectList() {
@@ -33,7 +30,7 @@ public class SimpleQueryTest extends MybatisPlusApplicationTests {
         System.out.println(("----- SimpleQueryTest testSelectList 叠加后续操作 method test ------"));
         // 获取 名称
         System.out.println(("----- 获取 名称 ------"));
-        List<String> list = SimpleQuery.list(new QueryWrapper<UserDO>().eq("id",5).lambda(), UserDO::getName);
+        List<String> list = SimpleQuery.list(new QueryWrapper<UserDO>().eq("id", 5).lambda(), UserDO::getName);
         // 以 name 分组
         System.out.println(("----- 以 name 分组 ------"));
         Map<String, UserDO> userMap = SimpleQuery.keyMap(new LambdaQueryWrapper<UserDO>(), UserDO::getName);

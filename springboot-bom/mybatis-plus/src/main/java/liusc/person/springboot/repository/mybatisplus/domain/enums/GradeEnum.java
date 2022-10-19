@@ -9,7 +9,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * @author LiuShiChen
  * @date 2022/10/19 13:58:50
  **/
-//@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum GradeEnum {
 
     PRIMARY(1, "小学"),

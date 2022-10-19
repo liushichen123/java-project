@@ -9,6 +9,7 @@ import liusc.person.springboot.repository.mybatisplus.repository.entity.UserDO;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -39,7 +40,7 @@ public class CrudTest extends SpringbootApplicationTests {
     @Test
     public void testSave() {
         System.out.println(("----- save method test ------"));
-        boolean result = userService.save(new UserDO().setName("liusc").setAge(24).setGrade(GradeEnum.HIGH));
+        boolean result = userService.save(new UserDO().setName("liusc").setAge(24).setGrade(GradeEnum.HIGH).setVersion(LocalDateTime.now()));
         Assert.isTrue(result, "用户新增失败");
     }
 
@@ -59,7 +60,7 @@ public class CrudTest extends SpringbootApplicationTests {
     public void testSaveOrUpdate() {
         System.out.println(("----- SaveOrUpdate method test ------"));
         // 有哪些字段更新那些字段
-        boolean result = userService.saveOrUpdate(new UserDO().setName("PP").setAge(24).setId(5L));
+        boolean result = userService.saveOrUpdate(new UserDO().setName("PDSP").setAge(24).setId(1582546123164270608L));
         Assert.isTrue(result, "用户更新失败");
     }
 

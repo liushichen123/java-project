@@ -1,5 +1,6 @@
 package liusc.person.springboot.repository.mybatisplus;
 
+import com.alibaba.fastjson.JSON;
 import liusc.person.springboot.repository.mybatisplus.domain.User;
 import liusc.person.springboot.repository.mybatisplus.repository.entity.UserDO;
 import org.junit.jupiter.api.Test;
@@ -16,7 +17,7 @@ public class EnumConvertTest extends SpringbootApplicationTests {
     @Test
     public void testConvert() {
         UserDO userDO = userService.getById(1582546123164270604L);
-        System.out.println("转换前 ----- " + userDO);
+        System.out.println("转换前 ----- " + JSON.toJSON(userDO));
         User user = new User();
         BeanUtils.copyProperties(userDO, user);
         System.out.println("转换后 ----- " + user);

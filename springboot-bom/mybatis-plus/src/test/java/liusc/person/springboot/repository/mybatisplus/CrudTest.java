@@ -5,12 +5,9 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Assert;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import liusc.person.springboot.repository.mybatisplus.repository.entity.UserDO;
-import liusc.person.springboot.repository.mybatisplus.repository.mapper.UserMapper;
-import liusc.person.springboot.repository.mybatisplus.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

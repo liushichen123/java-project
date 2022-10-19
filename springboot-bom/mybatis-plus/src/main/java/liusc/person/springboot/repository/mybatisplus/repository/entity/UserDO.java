@@ -1,6 +1,7 @@
 package liusc.person.springboot.repository.mybatisplus.repository.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 import lombok.ToString;
 import lombok.experimental.Accessors;
@@ -15,7 +16,7 @@ import lombok.experimental.Accessors;
 @ToString
 @TableName("user")
 @Accessors(chain = true)
-public class UserDO {
+public class UserDO extends Model<UserDO> {
 
     private Long id;
 

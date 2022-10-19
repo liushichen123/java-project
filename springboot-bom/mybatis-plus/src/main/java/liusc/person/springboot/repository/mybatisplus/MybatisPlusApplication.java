@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * mybatis-plus 启动类
+ *
  * @author LiuShiChen
  * @date 2022/10/13 14:08:53
  **/

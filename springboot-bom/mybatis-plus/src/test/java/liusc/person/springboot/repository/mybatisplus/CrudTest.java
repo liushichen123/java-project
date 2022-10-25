@@ -101,7 +101,7 @@ public class CrudTest extends SpringbootApplicationTests {
 
     @Test
     public void testPage() {
-        System.out.println(("----- Page method test ------"));
+        System.out.println(("----- page method test ------"));
         IPage<UserDO> page = new Page<>();
         IPage<UserDO> userDOPage = userService.page(page);
         System.out.println(userDOPage);

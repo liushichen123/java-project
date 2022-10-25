@@ -1,18 +1,22 @@
-package liusc.person.springboot.repository.mybatisplus.controller.command;
+package liusc.person.springboot.repository.mybatisplus.controller.vo;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import liusc.person.springboot.repository.mybatisplus.common.ResultVO;
+import liusc.person.springboot.repository.mybatisplus.domain.User;
 import liusc.person.springboot.repository.mybatisplus.domain.enums.GradeEnum;
 import lombok.Data;
+import lombok.ToString;
 
 /**
- * 用户 - 通用命令
+ * 用户 - 视图层实体
  *
  * @author LiuShiChen
- * @date 2022/10/18 14:35:54
+ * @date 2022/10/18 14:29:58
  **/
 @Data
-public class UserCommon {
+@ToString
+public class UserVO extends User implements ResultVO {
 
     private Long id;
 

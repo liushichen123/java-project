@@ -1,12 +1,10 @@
 package liusc.person.springboot.repository.mybatisplus.config.config;
 
 import com.baomidou.mybatisplus.annotation.DbType;
-import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * mybatis plus 插件 bean
@@ -14,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @author LiuShiChen
  * @date 2022/10/19 15:03:54
  **/
-@Configuration
+//@Configuration
 public class MybatisPlusConfig {
 
     /**

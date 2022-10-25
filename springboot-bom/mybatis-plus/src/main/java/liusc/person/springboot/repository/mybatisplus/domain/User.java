@@ -24,6 +24,6 @@ public class User {
 
     private String email;
 
-    @JSONField(serialzeFeatures= SerializerFeature.WriteEnumUsingToString)
+    @JSONField(serialzeFeatures = SerializerFeature.WriteEnumUsingToString)
     private GradeEnum grade;
 }

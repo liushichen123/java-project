@@ -1,7 +1,6 @@
 package liusc.person.springboot.repository.mybatisplus.repository.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
-import com.baomidou.mybatisplus.extension.activerecord.Model;
 import liusc.person.springboot.repository.mybatisplus.domain.enums.GradeEnum;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -17,7 +16,7 @@ import java.time.LocalDateTime;
 @Data
 @TableName("user")
 @Accessors(chain = true)
-public class UserDO extends Model<UserDO> {
+public class UserDO {
 
     @TableId(type = IdType.AUTO)
     private Long id;

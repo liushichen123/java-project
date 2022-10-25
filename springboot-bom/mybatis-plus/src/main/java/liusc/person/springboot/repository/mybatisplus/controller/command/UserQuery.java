@@ -2,17 +2,18 @@ package liusc.person.springboot.repository.mybatisplus.controller.command;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import liusc.person.springboot.repository.mybatisplus.common.Query;
 import liusc.person.springboot.repository.mybatisplus.domain.enums.GradeEnum;
 import lombok.Data;
 
 /**
- * 用户 - 通用命令
+ * 用户分页参数
  *
  * @author LiuShiChen
- * @date 2022/10/18 14:35:54
+ * @date 2022/10/19 16:29:54
  **/
 @Data
-public class UserCommon {
+public class UserQuery extends Query {
 
     private Long id;
 
@@ -24,4 +25,5 @@ public class UserCommon {
 
     @JSONField(serialzeFeatures = SerializerFeature.WriteEnumUsingToString)
     private GradeEnum grade;
+
 }

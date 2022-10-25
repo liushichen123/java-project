@@ -14,6 +14,6 @@ public class ModelTest extends SpringbootApplicationTests {
     @Test
     public void testAdd() {
         System.out.println(("----- model testAdd method test ------"));
-        new UserDO().setId(5L).setName("liusc").updateById();
+        new UserDO().setId(5L).setName("liusc");
     }
 }

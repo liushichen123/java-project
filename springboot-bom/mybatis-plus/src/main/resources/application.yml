@@ -1,4 +1,3 @@
-
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -34,3 +33,10 @@ mybatis-plus:
 
 server:
   port: 8081
+
+pagehelper:
+  auto-runtime-dialect: true
+  params: count=countSql
+  reasonable: true
+  supportMethodsArguments: true
+

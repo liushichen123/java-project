@@ -1,0 +1,19 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <!-- 服务对外的名称 -->
+    <dubbo:application name="dubbo-consumer"/>
+
+    <!-- 该服务以什么协议发布出去   -->
+    <dubbo:protocol name="dubbo" port="20880"/>
+    <!-- 配置注册中心 -->
+    <dubbo:registry address="nacos://192.168.31.241:8848" timeout="1000"/>
+
+    <dubbo:reference id="loginService" interface="service.LoginService"
+        url="dubbo://192.168.255.110:20880/service.LoginService"
+    />
+
+</beans>
